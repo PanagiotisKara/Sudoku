@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Sudoku</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+
+  <body>
+    <div class="app">
+      <div class="help help-fixed" aria-label="Sudoku rules">
+        <span class="emoji">❔</span>
+        <div class="tooltip">
+          <b>How to play Sudoku</b><br />
+          • Fill the grid so that each row, column, and 3×3 box contains the
+          digits 1–9 exactly once.<br />
+          • <b>Black</b> numbers are the given clues (locked).<br />
+          • <b>Blue</b> numbers are the ones <i>you</i> place by drag &amp;
+          drop.<br />
+          • Drag digits from the number bank into empty cells. You can also drag
+          blue numbers between cells.<br />
+          • Double-click a blue number to clear it. Double-click an empty cell
+          to clear all its notes.<br />
+          • Turn on <b>Notes</b> to place/remove pencil marks by dragging digits
+          into cells.
+        </div>
+      </div>
+      <div class="main">
+        <aside class="menu">
+          <div class="brand">
+            <img
+              src="sudoku.png"
+              alt="Sudoku"
+              class="logo"
+            />
+            <div class="timer" id="timer" aria-live="polite">00:00</div>
+          </div>
+
+          <button id="newBtn" title="Generate a new random puzzle">
+            New Puzzle
+          </button>
+          <button id="restartBtn" title="Reset to the starting state">
+            Restart
+          </button>
+
+          <label class="field">
+            <span>Difficulty</span>
+            <select
+              id="difficulty"
+              class="select"
+              title="Select difficulty"
+            >
+              <option value="easy">Easy</option>
+              <option value="medium" selected>Medium</option>
+              <option value="hard">Hard</option>
+              <option value="expert">Expert</option>
+            </select>
+          </label>
+
+          <button id="notesBtn" class="toggle" title="Toggle pencil marks (notes)">
+            Notes: Off
+          </button>
+          <button id="pauseBtn" class="toggle" title="Pause / Resume timer">
+            ⏸ Pause
+          </button>
+        </aside>
+
+        <div class="play-area">
+          <div class="board-wrap">
+            <div id="board" class="board" aria-label="Sudoku board"></div>
+          </div>
+
+          <div class="bottom">
+            <div class="digits" id="digits"></div>
+            <div class="status" id="status">
+              Select difficulty and press <b>New Puzzle</b> or start dragging a digit.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="drag-ghost" class="drag-ghost"></div>
+  </body>
+</html>
