@@ -13,3 +13,5 @@ Sudoku Browser Game with difficulties, timer &amp; more
           to clear all its notes.<br />
           • Turn on <b>Notes</b> to place/remove pencil marks by dragging digits
           into cells.
+<img width="1909" height="907" alt="empty" src="https://github.com/user-attachments/assets/b67ef573-b84e-47dc-bb81-41af615c22ee" />
+<img width="1916" height="906" alt="solved" src="https://github.com/user-attachments/assets/8c36248d-769c-4568-add8-0ed4bbb8830c" />
